@@ -15,5 +15,18 @@
                 </p>
             {% endif %}
         {% endfor %}
+
+        <form action="" method="POST" novalidate>
+            {{ form.hidden_tag() }}
+            <p>
+                {{ form.name.label }}<br>
+                {{ form.name(size=32) }}
+            </p>
+            <p>
+                {{ form.place.label }}<br>
+                {{ form.place() }}
+            </p>
+            <p>{{ form.submit() }}</p>
+        </form>
     </body> 
 </html>
