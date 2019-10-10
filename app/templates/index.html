@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Is anyone in Cam?</title>
+    </head>
+    <body>
+        {% for place in places %}
+            {% if place.people|length > 0 %}
+                <p>
+                    <h3>{{ place.name }}</h3>
+                    <ul>
+                        {% for person in place.people %}
+                        <li>{{ person }}</li>
+                        {% endfor %}
+                    </ul>
+                </p>
+            {% endif %}
+        {% endfor %}
+    </body> 
+</html>
